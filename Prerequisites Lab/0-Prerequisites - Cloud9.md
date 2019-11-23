@@ -2,7 +2,7 @@
 
 1) Go to the Cloud9 console and press *Create environment*.
 
-![prerequisites-lab](/imgages/1d057a6d465f25b6ff1842ee465ab08d.png)
+![/img/Migrate-images/lab-0/](/img/Migrate-images/lab-0/1d057a6d465f25b6ff1842ee465ab08d.png)
 
 2) Provide a name for your environment - you can name it ___TechShift___
 
