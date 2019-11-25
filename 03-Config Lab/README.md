@@ -1,10 +1,3 @@
-+++
-title= "AWS Config Lab"
-description= "Techshift Accelerator Migrate"
-draft = false
-weight = -92
-+++
-
 #### AWS Config
 
 1)  Go to the AWS Search Service bar and find *AWS Config*. Press *Get started*.
