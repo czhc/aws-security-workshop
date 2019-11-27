@@ -1,4 +1,4 @@
-#Analyzing Cloud Trail Logs with Athena
+# Analyzing Cloud Trail Logs with Athena
 
 1. For this exercies we will need an S3 bucket. To create an S3 bucket execute the following command in the Cloud9 Terminal
 
