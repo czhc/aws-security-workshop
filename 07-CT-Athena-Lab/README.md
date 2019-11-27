@@ -1,6 +1,7 @@
 # Analyzing Cloud Trail Logs with Athena
 
 1. For this exercies we will need an S3 bucket. To create an S3 bucket execute the following command in the Cloud9 Terminal
+ **:heavy_exclamation_mark: Make sure you use your replace the bucket name in the command below with a unique name.**
 
 ```
 aws s3api create-bucket --bucket [yourname-bkksecurity] --region ap-southeast-1 --create-bucket-configuration LocationConstraint=ap-southeast-1
@@ -22,7 +23,7 @@ aws s3api create-bucket --bucket [yourname-bkksecurity] --region ap-southeast-1 
 ![images](images/settingbucket.png)
 
 6. In the Query Editor Copy-Paste the extract bellow.
-Make sure you change the ___s3://CloudTrail_bucket_name/AWSLogs/Account_ID/___ with the name and account ID of your Cloud Trail Bucket.
+ **:heavy_exclamation_mark: Make sure you change the ___s3://CloudTrail_bucket_name/AWSLogs/Account_ID/___ with the name and account ID of your Cloud Trail Bucket.**
 
 ```
 CREATE EXTERNAL TABLE cloudtrail_logs (
