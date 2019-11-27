@@ -1,5 +1,7 @@
-# Welcone to the AWS Security Workshop
+# AWS Security Workshop
+![main image](images/ws-image.png)
 
+## Introduction
 By doing this labs you will understand the basic services and security concepts that you need to implement in your AWS Account.
 
 
