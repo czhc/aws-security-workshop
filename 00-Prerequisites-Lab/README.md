@@ -52,4 +52,6 @@ aws cloudformation describe-stacks --stack-name bkksecuritychallenge2019 \
 
 ![images/](images/statuscheck.png)
 
-10) When you see the operations has completed successfully move to the [first lab (CloudTrail)](../01-CloudTrail-Lab/README.md)
+ **:heavy_exclamation_mark: DO NOT move past this point until you see CREATE_COMPLETE as the status for your CloudFormation stack**
+
+10) When you see that the operation has been completed successfully move to the [first lab (CloudTrail)](../01-CloudTrail-Lab/README.md)
