@@ -13,3 +13,5 @@
 4)  GuarDuty is enabled on the account.
 
 ![images](images/11e91f206aca99a464ef8dbd95477cdb.png)
+
+Proceed to the [next lab (Config Lab)](../03-Config-Lab/README.md)
