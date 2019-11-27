@@ -1,3 +1,5 @@
+### LAB 6 - AWS WAF
+
 1)  Got to the AWS WAF console and select *Go to AWS WAF*.
 
 ![images](images/0364236d876a9d7f3448dc62b86b5a07.png)
