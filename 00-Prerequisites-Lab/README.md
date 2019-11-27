@@ -4,7 +4,7 @@
 
 ![prerequisites lab](images//1d057a6d465f25b6ff1842ee465ab08d.png)
 
-2) Provide a name for your environment - you can name it ___TechShift___
+2) Provide a name for your environment - you can name it ___BKKSecurity___
 
 ![images/](images/cloud9-environment-name.png)
 
