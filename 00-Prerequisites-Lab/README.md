@@ -52,4 +52,4 @@ aws cloudformation describe-stacks --stack-name bkksecuritychallenge2019 \
 
 ![images/](images/statuscheck.png)
 
-10) When you see the operations has completed successfully move to the [first lab (CloudTrail)](/aws-security-workshop/01-CloudTrail-Lab/README.md)
+10) When you see the operations has completed successfully move to the [first lab (CloudTrail)](../01-CloudTrail-Lab/README.md)
