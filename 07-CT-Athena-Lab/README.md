@@ -96,3 +96,5 @@ LIMIT 100;
 9. Execute the command and check the results
 
 ![images](images/results.png)
+
+[Go back to the begining](/../../)

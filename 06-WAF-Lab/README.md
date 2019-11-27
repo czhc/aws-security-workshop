@@ -63,3 +63,5 @@ notice that you are not allowed to access you ALB.
 ![images](images/7205543d7b9f5e8b063fbe3a4b715446.png)
 
 Try to access the ALB on your mobile phone. You should be able to access it.
+
+Proceed to the [next lab (Anaylizing CloudTrail logs with Athena)](../07-CT-Athena-Lab/README.md)
