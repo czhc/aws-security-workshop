@@ -78,3 +78,5 @@ alarm.
     successfully applied you will see that the alarm has disappeared.
 
 ![images](images/abe46a92e787db537b7921389463db05.png)
+
+Proceed to the [next lab (KMS Lab)](../04-KMS-Lab/README.md)

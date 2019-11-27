@@ -23,3 +23,5 @@ Create CloudTrail
 ![images](images/955ed0bb3071018e5bbbaa9a6d68f7bb.png)
 
 Access the S3 bucket and make sure that the logs are being created.
+
+Proceed to the [next lab (GuardDuty)](../02-GuardDuty-Lab/README.md)

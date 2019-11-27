@@ -17,7 +17,7 @@ By doing this labs you will understand the basic services and security concepts 
 
 [5. Secrets Manager Lab](05-Secrets-Manager-Lab/README.md)
 
-[6. WAF Lav](06-WAF-Lab/README.md)
+[6. WAF Lab](06-WAF-Lab/README.md)
 
 ## How to login to your lab environment via Event Engine
 

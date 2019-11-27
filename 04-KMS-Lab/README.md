@@ -85,3 +85,5 @@ You can use the AWS Management Console to create customer master keys (CMKs).
 ![/images](images/507e2bc692f033be78dfb46bfa11b073.png)
 
 17.  Choose **Finish** to create the CMK.
+
+Proceed to the [next lab (Secrets Manager Lab)](../05-Secrets-Manager/README.md)

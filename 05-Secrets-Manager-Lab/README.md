@@ -94,3 +94,4 @@ The output will look like this:
     "ARN": "arn:aws:secretsmanager:ap-southeast-1:695242525854:secret:techshift/demo/aurora-TnOtO6"
 }
 ```
+Proceed to the [next lab (WAF Lab)](../06-WAF-Lab/README.md)
