@@ -1,3 +1,24 @@
+### Creating an EC2 Key Pair
+
+First we need to create a key pair that will be used to establish an SSH
+connection.
+
+1)  Go to the *Key Pairs* in the EC2 instances console
+
+![images](images/1b7a0e08bd10420fa37c1270cffe1f54.png)
+
+2)  Click on the *Create Key Pair* button
+
+![images](images/d3c32b52f680b2710b9bb1a93c1407c1.png)
+
+3)  Key in *TechShift-KeyPair* in the name box.
+
+![images](images/c4490616d6988656078799a2695d6b01.png)
+
+4)  Now you will be able to see the key pair in the console and it will be in your *Downloads* folder.
+
+![images](images/7324683f50d7dbe301fa0c476d84153a.png)
+
 ### Create a Cloud9 environment
 
 1) Go to the Cloud9 console and press *Create environment*.
