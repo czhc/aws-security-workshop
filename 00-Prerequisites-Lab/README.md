@@ -24,3 +24,32 @@
 
 
 ![images/](images/6bf8fc54f1f01e9eda93a8dc95f5dccd.png)
+
+6) Click on *Open IDE*
+
+7)In the Terminal type teh following commands
+
+```
+git clone https://github.com/andyliza/aws-security-workshop.git
+
+```
+![images/](images/clone.png)
+
+8) Once the repository is cloned, please depoloy the CloudFormation template using the following command:
+
+```
+aws cloudformation create-stack --template-body file://./aws-security-workshop/Cloudformation/security-workshop.json --stack-name bkksecuritychallenge2019 --capabilities CAPABILITY_NAMED_IAM --parameters ParameterKey=InstanceType,ParameterValue=t2.small ParameterKey=KeyName,ParameterValue=TechShift-KeyPair ParameterKey=RDSPassword,ParameterValue=techshift2019 ParameterKey=RDSUsername,ParameterValue=admin ParameterKey=VPCCIDR,ParameterValue=172.4.0.0/16
+
+```
+
+9) Once the installation begins you can check the status of the deployement using this command:
+
+```
+aws cloudformation describe-stacks --stack-name bkksecuritychallenge2019 \
+                                   --query 'Stacks[0].StackStatus'
+                                   --output text
+```
+
+![images/](images/statuscheck.png)
+
+10) When you see the operations has completed successfully move to the [first lab (CloudTrail)](01-CloudTrail-Lab/README.md)
