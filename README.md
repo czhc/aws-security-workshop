@@ -19,6 +19,8 @@ By doing this labs you will understand the basic services and security concepts 
 
 [6. WAF Lab](06-WAF-Lab/README.md)
 
+[7. Analyze CloudTrail logs with Athena Lab](07-CT-Athena-Lab/README.md)
+
 ## How to login to your lab environment via Event Engine
 
 Before starting the labs yo will receive a hash key to access your AWS environment. You will key in this hash key in Event Engine.
