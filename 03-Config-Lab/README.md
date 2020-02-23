@@ -18,7 +18,10 @@
 4)  Select the 3 rules highlighted below. Use the search bar to find them. Click
     *Next* once done.
 
-![images](images/a6966fb42a24a42322f3a8f6b6fcef18.png)
+    ![images](images/a6966fb42a24a42322f3a8f6b6fcef18.png)
+
+    The 3 rules are: `autoscaling-group-elb-healthcheck-required`, `cloud-trail-cloud-watch-logs-enabled` and `cloudtrail-enabled`
+
 
 5).  Review the configuration page and click *Confirm*.
 
