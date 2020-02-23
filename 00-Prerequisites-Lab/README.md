@@ -57,7 +57,7 @@ wget https://raw.githubusercontent.com/czhc/aws-security-workshop/master/Cloudfo
 
 ![images/](images/clone.png)
 
-8) Once the repository is cloned, please depoloy the CloudFormation template using the following command:
+8) Once the repository is cloned, deploy the CloudFormation template using the following command:
 
 ```sh
 aws cloudformation create-stack --template-body file://./security-workshop.json --stack-name securityImmersionDayStack --capabilities CAPABILITY_NAMED_IAM --parameters ParameterKey=InstanceType,ParameterValue=t2.small ParameterKey=KeyName,ParameterValue=SecurityImmersionDay ParameterKey=RDSPassword,ParameterValue=securityID2020 ParameterKey=RDSUsername,ParameterValue=admin ParameterKey=VPCCIDR,ParameterValue=172.4.0.0/16
@@ -75,4 +75,11 @@ aws cloudformation describe-stacks --stack-name securityImmersionDayStack \
 
  **:heavy_exclamation_mark: DO NOT move past this point until you see CREATE_COMPLETE as the status for your CloudFormation stack**
 
-10) When you see that the operation has been completed successfully move to the [first lab (CloudTrail)](../01-CloudTrail-Lab/README.md)
+Explore the output of Stack. What are the resources that were created from the Stack?
+
+```sh
+aws cloudformation describe-stack-resources --stack-name securityImmersionDayStack --output table --query "StackResources[].ResourceType"
+
+```
+
+10) Move to the [first lab (CloudTrail)](../01-CloudTrail-Lab/README.md)
