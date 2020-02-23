@@ -95,5 +95,7 @@ The output will look like this:
     ], 
     "CreatedDate": 1582441303.964, 
     "ARN": "arn:aws:secretsmanager:us-east-1:<ACCOUNT_ID>:secret:securityid/demo/auroradb-HP6Bcj"
-}```
+}
+```
+
 Proceed to the [next lab (WAF Lab)](../06-WAF-Lab/README.md)
