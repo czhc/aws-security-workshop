@@ -5,20 +5,22 @@
 2) On either the service introduction page or the secrets list page,
     choose **Store a new secret**.
 
-3) On the **Store a new secret** page, choose **Credentials for Database**, in
-   the username type *admin and in the password box type techshift2019. Choose
-   the security created in the previous lab called techshiftkey2019* and select
-   the database created in the previous lab.
+3) On the **Store a new secret** page, choose **Credentials for Database**.
+    Fill in the following values: 
+    User name: `admin`
+    Password: `securityID2020`
+    Encryption Key: `security-id`
+    Database: `securityimmersiondaystack-rd-...`
+    
+    ![images](images/62ee37a962c8d96713af8b33f510fe6d.png)
 
-![iamges](images/62ee37a962c8d96713af8b33f510fe6d.png)
-
-4)  Give the *Secret* a name – *techshift/demo/aurora*. Add a description and
+4)  Give the *Secret* a name – *securityid/demo/auroradb*. Add a description and
     press *Next*.
 
-![iamges](images/8625b77cdb1bb9b3ac03fb8c97b92836.png)
+![images](images/8625b77cdb1bb9b3ac03fb8c97b92836.png)
 
 5)  Enable automatic rotation for 30 days using a Lambda function and name it
-    *aurora-secret-rotation-lambda* and press *Next*.
+    `aurora-secret-rotate` and press *Next*.
 
 ![iamges](images/6b319d5df7d49e8c19e7b662969e2954.png)
 
@@ -47,32 +49,33 @@
 2)  In the console type the following commands:
 
 ```
-   aws secretsmanager describe-secret --secret-id techshift/demo/aurora
+   aws secretsmanager describe-secret --secret-id securityid/demo/auroradb
+
 ```
 
 The output will look like this:
 
 ```
 {
+    "Name": "securityid/demo/auroradb", 
+    "VersionIdsToStages": {
+        "f989cabb-6c54-4ee5-a939-2a72a34b3689": [
+            "AWSPENDING"
+        ], 
+        "6aff56cd-6c64-401c-b3da-e24485d898d3": [
+            "AWSCURRENT"
+        ]
+    }, 
+    "Tags": [], 
     "RotationRules": {
         "AutomaticallyAfterDays": 30
-    },
-    "Name": "techshift/demo/aurora",
-    "VersionIdsToStages": {
-        "44702597-7be7-4da8-b013-8124020caefe": [
-            "AWSCURRENT"
-        ],
-        "38a914cb-4015-4e1a-ad48-d0483690823c": [
-            "AWSPENDING"
-        ]
-    },
-    "Tags": [],
-    "RotationEnabled": true,
-    "LastChangedDate": 1574181498.181,
-    "KmsKeyId": "arn:aws:kms:ap-southeast-1:695242525854:key/dc1eda08-9f36-4855-b047-2d2a8994e204",
-    "RotationLambdaARN": "arn:aws:lambda:ap-southeast-1:695242525854:function:SecretsManageraurora-secret-rotation-lambda",
-    "ARN": "arn:aws:secretsmanager:ap-southeast-1:695242525854:secret:techshift/demo/aurora-TnOtO6",
-    "Description": "password for the aurora db"
+    }, 
+    "LastChangedDate": 1582441450.399, 
+    "KmsKeyId": "arn:aws:kms:us-east-1:<ACCOUNT_ID>:key/<KEY_UUID>", 
+    "RotationEnabled": true, 
+    "LastAccessedDate": 1582416000.0, 
+    "ARN": "arn:aws:secretsmanager:us-east-1:<ACCOUNT_ID>:secret:securityid/demo/auroradb-HP6Bcj", 
+    "RotationLambdaARN": "arn:aws:lambda:us-east-1:<ACCOUNT_ID>:function:SecretsManageraurora-secret-rotate"
 }
 ```
 ...and the command:
@@ -84,14 +87,13 @@ The output will look like this:
 
 ```
 {
-    "Name": "techshift/demo/aurora",
-    "VersionId": "44702597-7be7-4da8-b013-8124020caefe",
-    "SecretString": "{\"username\":\"admin\",\"password\":\"techshift2019\",\"engine\":\"mysql\",\"host\":\"techshift-db.cluster-cwkpkosksmzj.ap-southeast-1.rds.amazonaws.com\",\"port\":3306,\"dbClusterIdentifier\":\"techshift-db\"}",
+    "Name": "securityid/demo/auroradb", 
+    "VersionId": "6aff56cd-6c64-401c-b3da-e24485d898d3", 
+    "SecretString": "{\"username\":\"admin\",\"password\":\"securityID2020\",\"engine\":\"mysql\",\"host\":\"securityimmersiondaystack-rdscluster-1ipeamna53vil.cluster-cwi091zkedko.us-east-1.rds.amazonaws.com\",\"port\":3306,\"dbClusterIdentifier\":\"securityimmersiondaystack-rdscluster-1ipeamna53vil\"}", 
     "VersionStages": [
         "AWSCURRENT"
-    ],
-    "CreatedDate": 1574180923.067,
-    "ARN": "arn:aws:secretsmanager:ap-southeast-1:695242525854:secret:techshift/demo/aurora-TnOtO6"
-}
-```
+    ], 
+    "CreatedDate": 1582441303.964, 
+    "ARN": "arn:aws:secretsmanager:us-east-1:<ACCOUNT_ID>:secret:securityid/demo/auroradb-HP6Bcj"
+}```
 Proceed to the [next lab (WAF Lab)](../06-WAF-Lab/README.md)
