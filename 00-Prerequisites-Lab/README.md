@@ -59,7 +59,7 @@ git clone https://github.com/andyliza/aws-security-workshop.git
 8) Once the repository is cloned, please depoloy the CloudFormation template using the following command:
 
 ```
-aws cloudformation create-stack --template-body file://./aws-security-workshop/Cloudformation/security-workshop.json --stack-name bkksecuritychallenge2019 --capabilities CAPABILITY_NAMED_IAM --parameters ParameterKey=InstanceType,ParameterValue=t2.small ParameterKey=KeyName,ParameterValue=SecurityImmersionDay ParameterKey=RDSPassword,ParameterValue=secID2020 ParameterKey=RDSUsername,ParameterValue=admin ParameterKey=VPCCIDR,ParameterValue=172.4.0.0/16
+aws cloudformation create-stack --template-body file://./aws-security-workshop/Cloudformation/security-workshop.json --stack-name securityImmersionDayStack --capabilities CAPABILITY_NAMED_IAM --parameters ParameterKey=InstanceType,ParameterValue=t2.small ParameterKey=KeyName,ParameterValue=SecurityImmersionDay ParameterKey=RDSPassword,ParameterValue=secID2020 ParameterKey=RDSUsername,ParameterValue=admin ParameterKey=VPCCIDR,ParameterValue=172.4.0.0/16
 
 ```
 
