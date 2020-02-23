@@ -33,7 +33,7 @@ aws s3api create-bucket --bucket aws-athena-query-results-<YOUR ACCOUNT ID>-us-e
 ```
 CREATE EXTERNAL TABLE cloudtrail_logs (
 eventversion STRING,
-useridentity STRUCT<
+userIdentity STRUCT<
                type:STRING,
                principalid:STRING,
                arn:STRING,
@@ -45,42 +45,43 @@ sessioncontext:STRUCT<
 attributes:STRUCT<
                mfaauthenticated:STRING,
                creationdate:STRING>,
-sessionissuer:STRUCT<
+sessionIssuer:STRUCT<  
                type:STRING,
                principalId:STRING,
-               arn:STRING,
+               arn:STRING, 
                accountId:STRING,
                userName:STRING>>>,
-eventtime STRING,
-eventsource STRING,
-eventname STRING,
-awsregion STRING,
-sourceipaddress STRING,
-useragent STRING,
-errorcode STRING,
-errormessage STRING,
-requestparameters STRING,
-responseelements STRING,
-additionaleventdata STRING,
-requestid STRING,
-eventid STRING,
+eventTime STRING,
+eventSource STRING,
+eventName STRING,
+awsRegion STRING,
+sourceIpAddress STRING,
+userAgent STRING,
+errorCode STRING,
+errorMessage STRING,
+requestParameters STRING,
+responseElements STRING,
+additionalEventData STRING,
+requestId STRING,
+eventId STRING,
 resources ARRAY<STRUCT<
                ARN:STRING,
                accountId:STRING,
                type:STRING>>,
-eventtype STRING,
-apiversion STRING,
-readonly STRING,
-recipientaccountid STRING,
-serviceeventdetails STRING,
-sharedeventid STRING,
-vpcendpointid STRING
+eventType STRING,
+apiVersion STRING,
+readOnly STRING,
+recipientAccountId STRING,
+serviceEventDetails STRING,
+sharedEventID STRING,
+vpcEndpointId STRING
 )
+
 ROW FORMAT SERDE 'com.amazon.emr.hive.serde.CloudTrailSerde'
 STORED AS INPUTFORMAT 'com.amazon.emr.cloudtrail.CloudTrailInputFormat'
 OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
-LOCATION 's3://security-id-cloudtrail-logs-<AWS ACCOUNT ID>-us-east-1
-/AWSLogs/<AWS ACCOUNT ID>/CloudTrail/';
+LOCATION 's3://security-id-cloudtrail-logs-<ACCOUNT_ID>-us-east-1/AWSLogs/<ACCOUNT_ID>/CloudTrail/'
+;
 ```
 ![images](images/query.png)
 
