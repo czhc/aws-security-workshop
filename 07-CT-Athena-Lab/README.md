@@ -1,11 +1,14 @@
 # Analyzing Cloud Trail Logs with Athena
 
-1. For this exercies we will need an S3 bucket. To create an S3 bucket execute the following command in the Cloud9 Terminal
+For this exercise, we will be analyzing audit trails that have been generated throughout the Immersion Day activities using AWS Athena.
+
+1. For this exercies we will need an S3 bucket to store Athena query results. To create an S3 bucket execute the following command in the Cloud9 Terminal
 
  **:heavy_exclamation_mark: Make sure you use your replace the bucket name in the command below with a unique name.**
 
 ```
-aws s3api create-bucket --bucket [yourname-bkksecurity] --region ap-southeast-1 --create-bucket-configuration LocationConstraint=ap-southeast-1
+aws s3api create-bucket --bucket aws-athena-query-results-<YOUR ACCOUNT ID>-us-east-1 --region us-east-1 
+
 ```
 ![images](images/s3bucket.png)
 
@@ -13,13 +16,13 @@ aws s3api create-bucket --bucket [yourname-bkksecurity] --region ap-southeast-1 
 
 ![images](images/gotoathena.png)
 
-3. Press *Get Sarted*
+3. Press *Get Started*
 
-4. Click *Settings*
+4. You may see a warning to _set up a query result location in Amazon S3_. Click on the prompt.
 
 ![images](images/settings.png)
 
-5. In the setings area add the name of the bucket that you created in Step 1 of this lab. Once done click *Save*
+5. In the setings area add the name of the bucket that you created in Step 1 of this lab. Once done click *Save*. You can optionally enable _Encrypt query results_ and _Autocomplete_.
 
 ![images](images/settingbucket.png)
 
@@ -76,9 +79,11 @@ vpcendpointid STRING
 ROW FORMAT SERDE 'com.amazon.emr.hive.serde.CloudTrailSerde'
 STORED AS INPUTFORMAT 'com.amazon.emr.cloudtrail.CloudTrailInputFormat'
 OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
-LOCATION 's3://CloudTrail_bucket_name/AWSLogs/Account_ID/';
+LOCATION 's3://security-id-cloudtrail-logs-<AWS ACCOUNT ID>-us-east-1
+/AWSLogs/<AWS ACCOUNT ID>/CloudTrail/';
 ```
 ![images](images/query.png)
+
 
 7. Once the command is successfully executed you will see a new table created
 
