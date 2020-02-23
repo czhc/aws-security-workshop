@@ -2,7 +2,7 @@
 
 You can use the AWS Management Console to create customer master keys (CMKs).
 
-1.  Open the AWS Key Management
+1.  Open KMS Console
 
 2.  To change the AWS Region, use the Region selector in the upper-right corner
     of the page.
@@ -11,8 +11,10 @@ You can use the AWS Management Console to create customer master keys (CMKs).
 
 4.  Choose **Create key**.
 
-5.  Type an alias for the CMK – *techshiftkey2019*. The alias name cannot begin
-    with **aws/**. The **aws/** prefix is reserved by Amazon Web Services to
+5.  In Configure Key, choose Key Type: `Symmetric`.
+
+6.  Provide an alias for the CMK – *security-id-demo*. 
+    The alias name cannot begin with **aws/**. The **aws/** prefix is reserved by Amazon Web Services to
     represent AWS managed CMKs in your account.
 
 >   An alias is a display name that you can use to identify the CMK. We
