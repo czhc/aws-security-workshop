@@ -59,15 +59,14 @@ wget https://raw.githubusercontent.com/czhc/aws-security-workshop/master/Cloudfo
 
 8) Once the repository is cloned, please depoloy the CloudFormation template using the following command:
 
-```
-aws cloudformation create-stack --template-body file://./security-workshop.json --stack-name securityImmersionDayStack --capabilities CAPABILITY_NAMED_IAM --parameters ParameterKey=InstanceType,ParameterValue=t2.small ParameterKey=KeyName,ParameterValue=SecurityImmersionDay ParameterKey=RDSPassword,ParameterValue=secID2020 ParameterKey=RDSUsername,ParameterValue=admin ParameterKey=VPCCIDR,ParameterValue=172.4.0.0/16
-
+```sh
+aws cloudformation create-stack --template-body file://./security-workshop.json --stack-name securityImmersionDayStack --capabilities CAPABILITY_NAMED_IAM --parameters ParameterKey=InstanceType,ParameterValue=t2.small ParameterKey=KeyName,ParameterValue=SecurityImmersionDay ParameterKey=RDSPassword,ParameterValue=securityID2020 ParameterKey=RDSUsername,ParameterValue=admin ParameterKey=VPCCIDR,ParameterValue=172.4.0.0/16
 ```
 
 9) Once the installation begins you can check the status of the deployement using this command:
 
-```
-aws cloudformation describe-stacks --stack-name bkksecuritychallenge2019 \
+```sh
+aws cloudformation describe-stacks --stack-name securityImmersionDayStack \
                                    --query 'Stacks[0].StackStatus' \
                                    --output text
 ```
