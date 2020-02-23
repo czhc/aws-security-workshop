@@ -15,7 +15,7 @@
     "RDSPassword": {
       "Type": "String",
       "AllowedValues": [
-        "techshift2019"
+        "securityID2020"
       ]
     },
     "InstanceType": {
@@ -567,7 +567,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "VPC-CF-TechShift"
+            "Value": "VPC-CF-SecID"
           }
         ]
       }
@@ -835,7 +835,7 @@
         "Tags": [
           {
             "Key": "Name",
-            "Value": "techshift-db-group"
+            "Value": "secID-db-group"
           }
         ]
       }
@@ -1303,7 +1303,7 @@
           ]
         ]
       },
-      "Description": "TechShift Demo Website"
+      "Description": "Seecurity Immersion Day Website"
     }
   }
 }
