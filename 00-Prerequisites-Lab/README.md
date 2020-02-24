@@ -13,7 +13,7 @@ connection.
 
 3)  Key in *TechShift-KeyPair* in the name box.
 
-![images](images/screenshots/Screen Shot 2020-02-23 at 11.53.48 AM.png)
+![images](images/c4490616d6988656078799a2695d6b01.png)
 
 4)  Now you will be able to see the key pair in the console and it will be in your *Downloads* folder.
 
